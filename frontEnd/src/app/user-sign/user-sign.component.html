@@ -1,0 +1,30 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f0f0f0;">
+    <div class="card shadow-sm p-4" style="width: 300px; border-radius: 10px; background-color: #e0e0e0; color: #333;">
+      <h1 class="h5 mb-3 fw-normal text-center">Sign in</h1>
+  
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="user.userEmail"  class="form-control" id="name" placeholder="Name" name="name" style="background-color: #d3d3d3;">
+        <label for="name">E-Mail</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="user.userPassword" class="form-control" id="contact" placeholder="Contact" name="contact" style="background-color: #d3d3d3;">
+        <label for="contact">Password</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="user.userName" class="form-control" id="location" placeholder="Location" name="location" style="background-color: #d3d3d3;">
+        <label for="location">Your Name</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="user.userContactNumber" class="form-control" id="photoPath" placeholder="Photo Path" name="photoPath" style="background-color: #d3d3d3;">
+        <label for="photoPath">Contact Number</label>
+      </div>
+  
+      
+  
+      <button (click)="onSubmit()" class="btn btn-primary w-100" style="background-color: #666; border-color: #666;">Sign in</button>
+    </div>
+  </div>
+  

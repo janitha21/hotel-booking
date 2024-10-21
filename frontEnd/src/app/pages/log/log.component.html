@@ -1,0 +1,25 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f0f0f0;">
+  <div class="card shadow-sm p-4" style="width: 350px; border-radius: 10px; background-color: #e0e0e0; color: #333;">
+    <form (ngSubmit)="logIn()">
+      <h1 class="h3 mb-3 fw-normal text-center">Please sign in</h1>
+
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="user.userEmail" name="userName" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" style="background-color: #dcdcdc;">
+        <label for="floatingInput">Email address</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="user.userPassword" name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" style="background-color: #dcdcdc;">
+        <label for="floatingPassword">Password</label>
+      </div>
+
+      <button class="btn btn-primary w-100 py-2" style="background-color: #666; border-color: #666;">Log in</button>
+
+      <p class="mt-5">Create new account!</p>
+
+      <button (click)="signIn()" class="btn btn-primary w-100 py-2" type="button" style="background-color: #666; border-color: #666;">Sign up</button>
+
+      <p class="mt-5 mb-3 text-body-secondary text-center">&copy; 2017–2024</p>
+    </form>
+  </div>
+</div>

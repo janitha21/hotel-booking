@@ -1,0 +1,46 @@
+<div class="container">
+  <!-- Row for spacing -->
+  <div class="row mb-3"></div>
+
+  <div class="row">
+    <ul class="nav nav-pills nav-fill p-3 bg-dark rounded" style="margin-bottom: 20px;">
+
+      <!-- Hotels link -->
+      <li class="nav-item" style="margin-right: 15px;">
+        <a [routerLink]="['/products']" class="nav-link text-light">Hotels</a>
+      </li>
+
+      <!-- Dashboard link -->
+      <li class="nav-item" style="margin-right: 15px;">
+        <a [routerLink]="['/dash']" class="nav-link text-light">Dashboard</a>
+      </li>
+
+      <!-- Hotel Register link (admin only) -->
+      <li class="nav-item" style="margin-right: 15px;">
+        <a *ngIf="isAdmin()" [routerLink]="['/regProduct']" class="nav-link text-light">Hotel Register</a>
+      </li>
+
+      <!-- Dropdown link -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Location
+        </a>
+        <ul class="dropdown-menu bg-dark">
+          <li><a class="dropdown-item text-light" href="#">Action</a></li>
+          <li><a class="dropdown-item text-light" href="#">Another action</a></li>
+          <li><hr class="dropdown-divider text-light"></li>
+          <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
+        </ul>
+      </li>
+
+      <!-- Search form aligned to the right -->
+      <li class="nav-item ms-auto">
+        <form class="d-flex" role="search" (ngSubmit)="saveSearchName()">
+          <input [(ngModel)]="searchName" name="searchName" class="form-control me-2 bg-secondary text-light border-0" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </li>
+      
+    </ul>
+  </div>
+</div>

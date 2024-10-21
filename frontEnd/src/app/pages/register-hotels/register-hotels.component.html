@@ -1,0 +1,33 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #f0f0f0;">
+    <div class="card shadow-sm p-4" style="width: 300px; border-radius: 10px; background-color: #e0e0e0; color: #333;">
+      <h1 class="h5 mb-3 fw-normal text-center">Add Hotel</h1>
+  
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="userData.hotelName" class="form-control" id="name" placeholder="Name" name="name" style="background-color: #d3d3d3;">
+        <label for="name">Name</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="userData.hotelContact" class="form-control" id="contact" placeholder="Contact" name="contact" style="background-color: #d3d3d3;">
+        <label for="contact">Contact</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="userData.hotelLoacation" class="form-control" id="location" placeholder="Location" name="location" style="background-color: #d3d3d3;">
+        <label for="location">Location</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="userData.hotelPhotoPath" class="form-control" id="photoPath" placeholder="Photo Path" name="photoPath" style="background-color: #d3d3d3;">
+        <label for="photoPath">Photo Path</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <input [(ngModel)]="userData.hotelDescription" class="form-control" id="description" placeholder="Description" name="description" style="background-color: #d3d3d3;">
+        <label for="description">Description</label>
+      </div>
+  
+      <button (click)="onSubmit()" class="btn btn-primary w-100" style="background-color: #666; border-color: #666;">Add</button>
+    </div>
+  </div>
+  
