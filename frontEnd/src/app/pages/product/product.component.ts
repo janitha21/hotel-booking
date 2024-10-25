@@ -47,9 +47,13 @@ export class ProductComponent implements OnInit {
     this.productInfo=data;
     console.log(this.productInfo);
     
-    console.log( localStorage.getItem('ownerId'));
-    
     console.log( localStorage.getItem('userId1'));
+
+    console.log( localStorage.getItem('authToken'));
+
+   
+
+
 
     
 

@@ -1,20 +1,12 @@
-<div class="container py-3" style="background-color: #f8f9fa; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+<div class="container py-3 theme-container">
   <header>
-
-   
-    
-    <div  class="container">
-      <!-- Row for spacing -->
+    <div class="container">
       <div class="row mb-3"></div>
     
       <div class="row">
-        <ul class="nav nav-pills nav-fill p-3 bg-dark rounded" style="margin-bottom: 20px;">
-    
-        
-          <!-- -->
-    
-          <!-- Dropdown link -->
-          <li  class="nav-item dropdown">
+        <ul class="nav nav-pills nav-fill p-3 bg-dark rounded nav-container">
+          <!-- Location Dropdown -->
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Location
             </a>
@@ -25,48 +17,32 @@
               <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
             </ul>
           </li>
-    
-          <!-- Search form aligned to the right -->
+
+          <!-- Search form -->
           <li class="nav-item ms-auto">
-            <form class="d-flex" role="search" (ngSubmit)="changeApi()" >
-              <input [(ngModel)]="searchName" style="width: 150px; height: 30px;"  name="searchName" class="form-control me-2 bg-secondary text-light border-0" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex" role="search" (ngSubmit)="changeApi()">
+              <input [(ngModel)]="searchName" name="searchName" class="form-control me-2 search-input" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
           </li>
-          
         </ul>
       </div>
     </div>
 
-    <!-- -->
-    
-    <div class="pricing-header p-3 pb-md-4 mx-auto text-center" 
-         style="background: linear-gradient(135deg, #edefed, #acaaaa); 
-                border-radius: 10px; 
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
-                padding: 40px; 
-                transition: transform 0.3s ease, box-shadow 0.3s ease;">
-      <h1 class="display-4 fw-normal" 
-          style="font-family: 'Arial', sans-serif; 
-                 color: #ffffff; 
-                 text-transform: uppercase; 
-                 letter-spacing: 1.5px; 
-                 text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center header-container">
+      <h1 class="display-4 fw-normal header-title">
         Hotels In Sri Lanka
       </h1>
-      <p class="fs-5 text-body-secondary" 
-         style="color: #ffffff; 
-                font-size: 1.1rem; 
-                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
+      <p class="fs-5 text-body-secondary header-description">
         Discover the best hotels across Sri Lanka with our curated list. 
         Book now and enjoy exclusive deals and offers for your stay.
       </p>
     </div>
   </header>
 
-  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" style="margin-top: 30px;">
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center cards-container">
     <div *ngFor="let product of productInfo" class="col">
-      <div class="card h-100" style="border: 1px solid #ddd; background-color: #f8f9fa; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+      <div class="card h-100 card-style">
         <app-product-card [saveProduct]="product"></app-product-card>
       </div>
     </div>

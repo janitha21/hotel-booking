@@ -1,47 +1,30 @@
 <div class="col">
-  <div class="card " 
-       style="border: #555; 
-              
-              border-radius: 10px; 
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-              transition: transform 0.3s; 
-              overflow: hidden;">
+  <div class="card custom-card">
+    <img src="{{ saveProduct && saveProduct.hotelPhotoPath }}" alt="" class="card-img">
     
-    <img src="{{ saveProduct && saveProduct.hotelPhotoPath }}" 
-         alt="" 
-         style="width: 100%; 
-                height: 250px; 
-                object-fit: cover; 
-                border-radius: 0;">
-    
-    <div class="card-body" 
-         style="padding: 20px; 
-                background-color: #d7d2d2;">
-      <h3 class="card-title" 
-          style="color: #575454; 
-                 font-size: 1.5rem; 
-                 font-weight: bold; 
-                 margin-bottom: 0.5rem;">{{ saveProduct && saveProduct.hotelName }}</h3>
+    <div class="card-body custom-card-body">
+      <h3 class="card-title custom-card-title">{{ saveProduct && saveProduct.hotelName }}</h3>
       
-      <p class="card-text" 
-         style="color: #555; 
-                font-size: 1rem; 
-                line-height: 1.5; 
-                margin-bottom: 1rem;">{{ saveProduct && saveProduct.hotelDescription }}</p>
+      <p class="card-text custom-card-text">{{ saveProduct && saveProduct.hotelDescription }}</p>
       
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-          <button type="button" 
-                  class="btn btn-primary" 
-                  style="background-color: #4a4c4e; 
-                         border-color: #4a4a4b; 
-                         transition: background-color 0.3s;">
-            Book
-          </button>
+          <button (click)="makeBooking()" type="button" class="btn btn-primary custom-btn">Book</button>
         </div>
-        <small class="text-body-secondary" 
-               style="color: #888;">9 mins ago</small>
+        <small class="text-body-secondary custom-small-text">9 mins ago</small>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="loginToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Notification</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Please log in to proceed with booking.
     </div>
   </div>
 </div>

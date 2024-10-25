@@ -56,7 +56,8 @@ export class LogComponent {
               console.log(`User ID: ${this.userId}`);
               this.router.navigate(['/products']); // Navigate to the desired route after login
 
-              localStorage.setItem('userId1', this.userId.toString());
+             // localStorage.setItem('userId1', this.userId.toString());
+            
               
               
 

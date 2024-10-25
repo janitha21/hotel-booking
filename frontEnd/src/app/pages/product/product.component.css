@@ -1,0 +1,64 @@
+/* Sky blue theme container */
+.theme-container {
+    background-color: #e3f2fd; /* Light sky blue */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navigation bar styling */
+  .nav-container {
+    margin-bottom: 20px;
+  }
+  
+  /* Header section */
+  .header-container {
+    background: linear-gradient(135deg, #4e9cdc, #135b7f); /* Gradient with sky blue shades */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Header title */
+  .header-title {
+    font-family: 'Arial', sans-serif;
+    color: #b5cbeb; /* Darker blue for contrast */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Header description */
+  .header-description {
+    color: #eae4e4;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Search input */
+  .search-input {
+    width: 150px;
+    height: 30px;
+    background-color: #84bcea; /* Light sky blue */
+    color: #ffffff;
+    border: none;
+  }
+  
+  .cards-container .col {
+    padding: 15px; /* Adds space around each card */
+  }
+  
+  .card-style {
+    border: 1px solid #e7f1f9; /* Sky blue border */
+    background-color: #bbdefb;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  
+  
+  /* Hover effect on cards */
+  .card-style:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  

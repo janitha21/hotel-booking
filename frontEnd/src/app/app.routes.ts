@@ -5,6 +5,9 @@ import { ProductRegistrationComponent } from './pages/product-registration/produ
 import { LogComponent } from './pages/log/log.component';
 import { RegisterHotelsComponent } from './pages/register-hotels/register-hotels.component';
 import { UserSignComponent } from './user-sign/user-sign.component';
+import { BookHotelComponent } from './book-hotel/book-hotel.component';
+
+//import { BookHotelComponent } from './book-hotel/book-hotel.component';
 
 export const routes: Routes = [
     {
@@ -34,6 +37,10 @@ export const routes: Routes = [
     {
         path : "signCustomer",
         component : UserSignComponent
+    },
+    {
+        path : "bookHotel",
+        component : BookHotelComponent
     }
 
 
