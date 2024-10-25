@@ -49,7 +49,8 @@ export class ProductComponent implements OnInit {
     
     console.log( localStorage.getItem('ownerId'));
     
-    console.log( localStorage.getItem('userId'));
+    console.log( localStorage.getItem('userId1'));
+
     
 
   /* async loadProductInformation(){
